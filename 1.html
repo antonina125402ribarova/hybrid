@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Първа домашна</title>
+</head>
+<body>
+	<script>
+		//1
+		function sum(arr){
+		let chislo1 = Number(arr[0]);
+		let chislo2 = Number(arr[1]);
+		let chislo3 = Number(arr[2]);
+
+		let sum = chislo1 + chislo2 + chislo3
+		console.log(sum);
+	}
+	sum(['2', '3', '4']);
+
+	//2
+	function kalsumaidds(arr){
+		let suma = 0;
+		for(let cena of arr){
+			suma += chislo(cena);
+		}
+
+		console.log({suma});
+
+		let dds = suma * 0.2;
+		console.log({dds});
+		let vsichko = suma + dds;
+		console.log({vsichko});
+
+	}
+	kalsumaidds(['1.20', '2.60', '3.50']);
+
+	//3
+	function broibukva([string, bukva]){
+		let broi = 0;
+		for(let char of string){
+			if(char = bukva){
+				broi++;
+			}
+		}
+		console.log({broi});
+	}
+	broibukva([`hello`, `l`]);
+
+	//4
+	function figura([w, h, W, H]){
+		let fig1Area = chislo(w) * chislo(h);
+		let fig2Area = chislo(W) * chislo(H);
+
+		let obshtachast = Math.min(chislo(w), chislo(W) * Math.min(chislo(h), chislo(H));
+		let figureArea = fig1Area + fig2Area - obshtachast;
+		console.log(figureArea);
+	}
+	figureArea([`2`, `4`, `5`, `3`]);
+
+	//5
+	function visokosna(godina){
+		let purvo = godina % 4 == 0 && godina % 100 != 0;
+		let vtoro = godina % 400 == 0;
+
+		if(purvo || vtoro){
+			console.log('da');
+			return;
+		}
+		console.log('ne');
+	}
+	visokosna(1999);
+	visokosna(2020);
+
+	//6
+	function stringchisla(posledno){
+		let rezultat = '';
+		for(let i = 1; i<= posledno; i++){
+			rezultat +=i;
+
+		}
+		console.log(rezultat);
+	}
+	stringchisla(10);
+	stringchisla(20);
+
+	//7
+	function distanciq([x1, y1, x2, y2]){
+		let purvi = Math.pow((chislo(x2) - chislo(x1), 2);
+		let vtori = Math.pow((chislo(y2) - chislo(y1), 2);
+
+		let rezultat = Math.sqrt(purvi + vtori);
+		console.log(rezultat);
+	}
+	distanciq([`2`, `4`, `5`, `0`]);
+
+	//8
+	function kutiiibutilki(butilki, kapacitet){
+		let rezultat = Math.ceil(butilki/kapacitet);
+		console.log(rezultat);
+	}
+	kutiiibutilki(20, 5);
+	kutiiibutilki(15, 7);
+
+	//9
+	function triugulnik(arr){
+		arr = arr.map(chislo);
+
+		let stranaA = arr[0];
+		let stranaB = arr[1];
+		let stranaC = arr[2];
+
+		let polurazlika = (stranaA + stranaB + stranaC) / 2;
+
+		let area = Math.sqrt(polurazlika * (polurazlika - stranaA) * (polurazlika - stranaB) * (polurazlika - stranaC));
+		console.log(area);
+	}
+	triugulnik(['3', '4', '5']);
+
+
+	//10
+	function obem(array) {
+    let radius = array[0];
+    let visochina = array[1];
+
+    let volume = (1 / 3) * Math.PI * Math.pow(radius, 2) * visochina;
+
+    let plosht = Math.PI * radius * (radius + Math.sqrt(Math.pow(visochina, 2) + Math.pow(radius, 2)));
+
+    console.log("Обем на конуса: " + volume);
+    console.log("Повърхност на конуса: " + plosht);
+   }
+
+	obem([5, 10]);
+
+
+	//11
+	function chetnoilinechetno(chislo){
+		if(chislo % 1 == 0){
+			if(chislo % 2 == 0){
+				console.log("nechetno");
+			}else{
+				console.log("chetno");
+			}
+		}else{
+			console.log('nevalidno chislo');
+		}
+	}
+	chetnoilinechetno(2);
+	chetnoilinechetno(5);
+	chetnoilinechetno(1.22);
+
+	//12
+	function isPrime(chislo) {
+    if (chislo <= 1) {
+        return false;
+    }
+
+
+    for (let i = 2; i <= Math.sqrt(chislo); i++) {
+        if (chislo % i === 0) {
+            return false;
+        }
+    }
+
+    return true;
+   }
+
+    let num = 17;
+    if (isPrime(num)) {
+    console.log(num + " е просто число.");
+    } else {
+    console.log(num + " не е просто число.");
+    }
+
+
+	//13
+	function distanciqvreme(array) {
+  
+    let v1 = array[0] * 1000 / 3600
+    let v2 = array[1] * 1000 / 3600;
+    let t = array[2];
+
+    let s1 = v1 * t;
+    let s2 = v2 * t;
+
+    let distance = Math.abs(s1 - s2)
+
+    console.log("Разстояние между двата обекта в края на периода: " + distance + " метра.");
+  }
+	distanciqvreme([50, 30, 3600])
+
+	//14
+	function svoistva(arr){
+		let obekt = {};
+		obekt[arr[0]] = arr[1];
+		obekt[arr[2]] = arr[3];
+		obekt[arr[4]] = arr[5];
+
+		console.log(obekt);
+	}
+	svoistva(['ime', 'pesho', 'godini', '23', 'ulica', 'pobeda'])
+
+	//15
+	function naigolqm([edno, dve, tri]){
+		[edno, dve, tri] = [edno, dve, tri].map(chislo);
+		console.log(Math.max(edno, dve, tri));
+	}
+	naigolqm(['-2','67', '90']);
+	naigolqm(['167','-22', '44']);
+	naigolqm(['3333','2', '54']);
+
+	//16
+	function kalkulator([a, b, operaciq]){
+		[a, b] = [a, b].map(chislo);
+
+		let dobavi = function (a, b) { 
+			return a + b;
+		}
+
+		let izvadi = function (a, b) {
+			return a - b;
+		}
+
+		let umnoji = function (a, b) {
+			return a * b;
+		}
+
+		let razdeli = function (a, b) {
+			return a / b;
+		}
+
+		let izchisli = function(a, b, operaciq) {return operaciq(a, b); };
+
+		switch(operaciq){
+		case '+' : return izchisli(a, b, dobavi);
+		case '-' : return izchisli(a, b, izvadi);
+		case '*' : return izchisli(a, b, umnoji);
+		case '/' : return izchisli(a, b, razdeli);
+		}
+	}
+	console.log(kalkulator(['2', '4', '+']));
+	console.log(kalkulator(['2', '4', '*']));
+	console.log(kalkulator(['2', '4', '-']));
+	console.log(kalkulator(['2', '4', '/']));
+
+	//17
+	function glavnibukvi(str) {
+ 
+    let dumi = str.match(/\b\w+\b/g);
+    let glavni = dumi.map(word => word.toUpperCase());
+    let rezultat = glavni.join(", ");
+    return rezultat;
+  }
+
+    let vhodenniz = 'Hi, how are you?';
+    let rezultatenniz = glavnibukvi(vhodenniz);
+    console.log(rezultatenniz);
+
+	</script>
+	
+</body>
+</html>
